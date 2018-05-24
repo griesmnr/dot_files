@@ -1,9 +1,30 @@
 [push]
+  default = current
+[color]
+  ui = auto
+[alias]
+  a = add
+  aa = add --all
+  ap = add --patch
+  b = branch
+  branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
+  co = checkout
+  delete-merged-branches = "!git co master && git branch --no-color --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+  fp = push --force-with-lease
+  s = status
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+[merge]
+  ff = only
+[fetch]
+  prune = true
+[rebase]
+  autosquash = true
+[push]
   default = matching
 [user]
   name = Nicole Griesmeyer
   email = nicole@griesmeyer.org
 [core]
   editor = atom --wait
-[alias]
-  delete-merged-branches = "!git co master && git branch --no-color --merged | grep -v '\\*' | xargs -n 1 git branch -d"
