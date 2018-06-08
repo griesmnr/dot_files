@@ -7,4 +7,5 @@ First, check this out to your root directory.
 Then run the following commands:
 
 `ln -s /Users/ngriesmeyer/.dotfiles/config/.zshrc ~/.zshrc`
+
 `ln -s /Users/ngriesmeyer/.dotfiles/config/.gitignore ~/.gitignore`
